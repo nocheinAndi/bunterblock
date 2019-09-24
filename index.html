@@ -18,13 +18,12 @@
     <link href="css/custom.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
             crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://s3.amazonaws.com/phplist/phplist-subscribe-0.2.min.js"></script>
 </head>
 
 <body>
@@ -65,32 +64,73 @@
             </h1>
             <p>
                 Wir sind das genossenschaftliche Gemeinschafts-Wohnprojekt „Bunter Block“ in Bochum Leithe.
-                Gemeinsam mit der Stiftung trias haben wir für das Grundstück der ehemaligen Bertram-Grundschule ein Erbbaurecht erzielt. Durch diese Verbindung werden für das Projekt ökologische und soziale Ziele dauerhaft gesichert und eine spätere Privatisierung ausgeschlossen.
+                Gemeinsam mit der Stiftung trias haben wir für das Grundstück der ehemaligen Bertram-Grundschule ein
+                Erbbaurecht erzielt. Durch diese Verbindung werden für das Projekt ökologische und soziale Ziele
+                dauerhaft gesichert und eine spätere Privatisierung ausgeschlossen.
             </p>
             <p>
                 In der Bertramstraße 6 wird also für immer gemeinschaftlich gewohnt und gewirtschaftet!
             </p>
             <p>
-                Was uns wichtig ist: Ein Leben im Einklang mit Mensch und Umwelt. Unsere Umgebung gemeinschaftlich selbst gestalten. Ökologisches und bedarsfgerechtes Wirtschaften. Eine gleichberechtigte Gemeinschaft unabhängig von sozialer, oder kultureller Herkunft.
+                Was uns wichtig ist: Ein Leben im Einklang mit Mensch und Umwelt. Unsere Umgebung gemeinschaftlich
+                selbst gestalten. Ökologisches und bedarsfgerechtes Wirtschaften. Eine gleichberechtigte Gemeinschaft
+                unabhängig von sozialer, oder kultureller Herkunft.
             </p>
-                Wollt ihr mehr wissen? Kommt doch mal vorbei!
+            Wollt ihr mehr wissen? Kommt doch mal vorbei!
             </p>
             <p>
-                Schreib uns unter <a href="kontakt.html">Kontakt</a> oder trag dich doch einfach in unseren Newsletter ein.
+                Schreib uns unter <a href="kontakt.html">Kontakt</a> oder trag dich doch einfach in unseren Newsletter
+                ein.
             </p>
         </div>
         <div class="container mt-5 mb-5">
             <div id="phplistsubscriberesult" class="container col-md-8">
-                <form action="https://zettelwirtschaft.bunter-block.org/?p=subscribe&id=3" method="post"
-                      id="phplistsubscribeform">
+
+
+                <form method="post" name="subscribeform" id="subscribeform" enctype="multipart/form-data">
                     <div class="form-group row">
                         <div class="offset-sm-1 col-sm-8">
-                            <input type="email" class="form-control" id="emailaddress"
+                            <input type="email" class="form-control" id="email"
                                    placeholder="Deine Mail-Adresse">
                         </div>
-                        <button type="submit" id="phplistsubscribe" class="btn btn-info" id="newsletter-button">Eintragen!</button>
+                        <input type=hidden name="htmlemail" value="1"> <input type="hidden" name="list[11]"
+                                                                              value="signup"/>
+                        <input type="hidden" name="subscribe" value="subscribe"/>
+                        <button type="submit" id="phplistsubscribe" class="btn btn-info" id="newsletter-button"
+                                onclick="if (checkform()) {submitForm();} return false;">
+                            Eintragen!
+                        </button>
+                        <div id="result" class="offset-sm-1" style="color: red;"></div>
                     </div>
                 </form>
+
+                <script type="text/javascript"> function checkform() {
+                    re = /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/;
+                    if (!(re.test(jQuery("#email").val()))) {
+                        jQuery("#result").empty().append("Bitte gebe eine gültige Adresse an.");
+                        jQuery("#email").focus();
+                        return false;
+                    }
+                    return true;
+                }
+
+                function submitForm() {
+                    successMessage = 'Danke für deine Registrierung. Bitte prüfe deine Mails zur Bestätigung!';
+                    data = jQuery('#subscribeform').serialize();
+                    jQuery.ajax({
+                        type: 'POST',
+                        data: data,
+                        url: 'https://zettelwirtschaft.bunter-block.org/?p=subscribe&id=2',
+                        dataType: 'html',
+                        success: function (data, status, request) {
+                            jQuery("#result").empty().append(data != '' ? data : successMessage);
+                            jQuery('#email').val('');
+                        },
+                        error: function (request, status, error) {
+                            alert('Entschuldige, wir konnte die E-Mail-Adresse nicht registrieren.');
+                        }
+                    });
+                } </script>
             </div>
         </div>
     </main>
