@@ -1,0 +1,53 @@
+@font-face {
+    font-family: Fibre;
+    src: url("../fonts/fibre-font-extended.otf") format("opentype"); }
+
+body {
+    max-width: 1600px;
+}
+
+#header {
+    background-color: #ECBF27;
+    margin-bottom: 0px !important;
+}
+
+#willkommen a {
+    color: #98a6d4 !important;
+}
+
+#header a {
+    color: #ffffff;
+}
+
+#sitemap {
+    background-color: #1F363D;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+#sitemap a {
+    color: #ffffff;
+    font-size: 12px;
+}
+
+#sitemap h4 {
+    color: #d3d3d3;
+    font-size: 15px;
+}
+
+h1 {
+    line-height: normal;
+    font-family: 'Fibre';
+    font-size: 2em;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+#wimmelbild-container {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.ueberschrift {
+    color: #98a6d4;
+}

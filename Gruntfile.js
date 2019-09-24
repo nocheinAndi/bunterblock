@@ -10,7 +10,7 @@ module.exports = function(grunt) {
         express: {
             all: {
                 options: {
-                    bases: ['C:\\Entwicklung\\Workspaces\\bunter-block-2019'],
+                    bases: ['C:\\Entwicklung\\Workspaces\\bunter-block-2019\\nocheinandi.github.io'],
                     port: 9999,
                     hostname: "0.0.0.0",
                     livereload: true

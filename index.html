@@ -1,88 +1,131 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
+    <title>Bunter Block eG</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
-
-    <title>Top navbar example for Bootstrap</title>  
-
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <meta name="robots" content="index,follow">
+    <meta name="description"
+          content="Bunter Block ist ein Zusammenschluss von jungen Familien und Freunden, die beschlossen haben ihre Ideale und Ziele in einem gemeinsamen Wohnprojekt umzusetzen.">
+    <meta name="keywords" content="">
+    <script src="https://analytics.bunter-block.org/piwik.js" async=""></script>
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand|Open+Sans" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="navbar-top.css" rel="stylesheet">
-  </head>
+    <link href="css/custom.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://s3.amazonaws.com/phplist/phplist-subscribe-0.2.min.js"></script>
+</head>
 
-  <body>
+<body>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-      <a class="navbar-brand" href="#">Top navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-        </ul>
-        <form class="form-inline mt-2 mt-md-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
+<div class="container">
+
+    <nav class="navbar navbar-expand-md mb-4" id="header">
+        <a class="navbar-brand ml-5" href="index.html">
+            <img src="img/haus.svg" alt="Bunter Block Branding" width="110">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse mr-5" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="kontakt.html"><b>Kontakt</b></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="impressum.html"><b>Impressum</b></a>
+                </li>
+            </ul>
+        </div>
     </nav>
-
-    <main role="main" class="container">
-      <div class="jumbotron">
-        <h1>Navbar example</h1>
-        <p class="lead">This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page.</p>
-        <a class="btn btn-lg btn-primary" href="../../components/navbar/" role="button">View navbar docs &raquo;</a>
-      </div>
-    </main>
-	
-	<nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Bottom navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-          <li class="nav-item dropup">
-            <a class="nav-link dropdown-toggle" href="https://getbootstrap.com" id="dropdown10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropup</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown10">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+    <main role="main" class="container" id="wimmelbild-container">
+        <script src="js/blowup.min.js"></script>
+        <img id="wimmelbild" src="img/wimmelbild.gif" style="cursor: crosshair;" class="img-fluid"
+             alt="Wimmelbild">
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('img#wimmelbild').blowup({background: "#FCEBB6"});
+            });
+        </script>
+        <div class="container mt-5" id="willkommen">
+            <h1 class="ueberschrift">
+                Hi Leute!
+            </h1>
+            <p>
+                Wir sind das genossenschaftliche Gemeinschafts-Wohnprojekt „Bunter Block“ in Bochum Leithe.
+                Gemeinsam mit der Stiftung trias haben wir für das Grundstück der ehemaligen Bertram-Grundschule ein Erbbaurecht erzielt. Durch diese Verbindung werden für das Projekt ökologische und soziale Ziele dauerhaft gesichert und eine spätere Privatisierung ausgeschlossen.
+            </p>
+            <p>
+                In der Bertramstraße 6 wird also für immer gemeinschaftlich gewohnt und gewirtschaftet!
+            </p>
+            <p>
+                Was uns wichtig ist: Ein Leben im Einklang mit Mensch und Umwelt. Unsere Umgebung gemeinschaftlich selbst gestalten. Ökologisches und bedarsfgerechtes Wirtschaften. Eine gleichberechtigte Gemeinschaft unabhängig von sozialer, oder kultureller Herkunft.
+            </p>
+                Wollt ihr mehr wissen? Kommt doch mal vorbei!
+            </p>
+            <p>
+                Schreib uns unter <a href="kontakt.html">Kontakt</a> oder trag dich doch einfach in unseren Newsletter ein.
+            </p>
+        </div>
+        <div class="container mt-5 mb-5">
+            <div id="phplistsubscriberesult" class="container col-md-8">
+                <form action="https://zettelwirtschaft.bunter-block.org/?p=subscribe&id=3" method="post"
+                      id="phplistsubscribeform">
+                    <div class="form-group row">
+                        <div class="offset-sm-1 col-sm-8">
+                            <input type="email" class="form-control" id="emailaddress"
+                                   placeholder="Deine Mail-Adresse">
+                        </div>
+                        <button type="submit" id="phplistsubscribe" class="btn btn-info" id="newsletter-button">Eintragen!</button>
+                    </div>
+                </form>
             </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
+        </div>
+    </main>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../../../assets/js/vendor/popper.min.js"></script>
-	<!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+    <!-- Footer -->
+    <footer class="page-footer font-small mt-5" id="footer">
+        <div id="punkte-container">
+            <img id="punkte" src="img/punkte.gif" class="img-fluid" alt="Punktewolke"/>
+        </div>
+        <div class="row" id="sitemap">
+            <div class="offset-md-2 col-md-2  mt-4 mb-4">
+                <h4>Links</h4>
+                <a href="index.html" rel="noopener noreferrer">Startseite</a></br>
+                <a href="kontakt.html" rel="noopener noreferrer">Kontakt</a></br></br>
+            </div>
+            <div class="col-md-2 mt-4 mb-4">
+                <h4>Partner</h4>
+                <a href="https://www.stiftung-trias.de/" target="_blank" rel="noopener noreferrer">Stiftung
+                    trias</a></br>
+                <a href="https://www.gls.de/" target="_blank" rel="noopener noreferrer">GLS Bank</a></br>
+            </div>
+            <div class="col-md-2 mt-4 mb-4">
+                <h4>Mehr Partner</h4>
+                <a href="https://www.wbb-nrw.de/" target="_blank" rel="noopener noreferrer">Wohnbund NRW</a></br>
+                <a href="https://lunatic-circus.de/" target="_blank" rel="noopener noreferrer">Lunatic Circus</a>
+            </div>
+            <div class="col-md-2  mt-4 mb-4">
+                <h4>Rechtliches</h4>
+                <a href="impressum.html" rel="noopener noreferrer">Impressum</a></br>
+                <a href="datenschutz.html" rel="noopener noreferrer">Datenschutzerklärung</a></br></br>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+</body>
 </html>
