@@ -28,13 +28,13 @@
 
 <body>
 
-<div class="container">
+<div class="container" id="super-container">
 
     <nav class="navbar navbar-expand-md mb-4" id="header">
-        <a class="navbar-brand ml-5" href="index.html">
+        <a class="navbar-brand ml-3" href="index.html">
             <img src="img/haus.svg" alt="Bunter Block Branding" width="110">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -55,7 +55,7 @@
                 $('img#wimmelbild').blowup({background: "#FCEBB6"});
             });
         </script>
-        <div class="container mt-5" id="willkommen">
+        <div class="container mt-5 px-3" id="willkommen">
             <h1 class="ueberschrift">
                 Hi Leute!
             </h1>
@@ -80,23 +80,22 @@
                 ein.
             </p>
         </div>
-        <div class="container mt-5 mb-5">
+        <div class="container mt-5 mb-5 px-3" id="mail">
             <div id="phplistsubscriberesult" class="container col-md-8">
-
-
                 <form method="post" name="subscribeform" id="subscribeform" enctype="multipart/form-data">
                     <div class="form-group row">
-                        <div class="offset-sm-1 col-sm-8">
+                        <div class="offset-sm-1 col-sm-6 mt-2">
                             <input type="email" class="form-control" id="email"
                                    placeholder="Deine Mail-Adresse">
                         </div>
-                        <input type=hidden name="htmlemail" value="1"> <input type="hidden" name="list[11]"
-                                                                              value="signup"/>
+                        <input type=hidden name="htmlemail" value="1"> <input type="hidden" name="list[11]" value="signup"/>
                         <input type="hidden" name="subscribe" value="subscribe"/>
-                        <button type="submit" id="phplistsubscribe" class="btn btn-info" id="newsletter-button"
-                                onclick="if (checkform()) {submitForm();} return false;">
-                            Eintragen!
-                        </button>
+                        <div class="col-sm-5 mt-2">
+                            <button type="submit" id="phplistsubscribe" class="btn btn-info" id="newsletter-button"
+                                    onclick="if (checkform()) {submitForm();} return false;">
+                                Eintragen!
+                            </button>
+                        </div>
                         <div id="result" class="offset-sm-1" style="color: red;"></div>
                     </div>
                 </form>
