@@ -43,6 +43,10 @@ h1 {
     text-transform: uppercase;
 }
 
+#header h1 {
+    color: #ffffff;
+}
+
 #wimmelbild-container {
     padding-right: 0px;
     padding-left: 0px;
