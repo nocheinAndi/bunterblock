@@ -31,7 +31,7 @@
 <div class="container" id="super-container">
 
     <nav class="navbar navbar-expand-md mb-4" id="header">
-        <a class="navbar-brand ml-2" href="index.html">
+        <a class="navbar-brand ml-2" href="index.php">
             <img src="img/haus.svg" alt="Bunter Block Branding" width="110">
         </a>
         <p class="navbar-text"><h1 class="d-sm-none d-md-block d-none d-sm-block">Bunter Block</h1></p>
@@ -42,27 +42,43 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item  active">
-                    <a class="nav-link" href="kontakt.html" style="text-align: right;"><b>Kontakt</b></a>
+                    <a class="nav-link" href="kontakt.php" style="text-align: right;"><b>Kontakt</b></a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <main role="main" class="container">
-        <div class="row">
-            <div class="offset-md-4 col-md-4 mt-4 mb-4">
-                <div id="impressum">
-                    <h1>Impressum</h1>
-                    <span><strong>Bunter Block eG</strong></span>
-                    <p>Bertramstraße 6<br>44866 Bochum</p>
-                    <p><strong>StNr: (beantragt)</strong></p>
-                    <p><strong>GnR 267 (Amtsgericht Bochum)&nbsp;</strong></p>
-                    <span><strong>Vertreten durch:</strong></span>    <script language="JavaScript" type="text/javascript">var part1="ico K";var part2="ig";var part3="N";var part4="ön";document.write("<p>"+part3+part1+part4+part2+"<br/>");var part1="ana";var part2="e";var part3="Mo";var part4=" Lau";document.write(part3+part1+part4+part2+"<br/>");var part1="pin M";var part2="ler";var part3="Cris";var part4="ül";document.write(part3+part1+part4+part2+"</br>");var part1="i Al A";var part2="ziz";var part3="Sam";var part4="bdul A";document.write(part3+part1+part4+part2+"</p>");</script>
-                    <script language="JavaScript" type="text/javascript">var part1="ian Hen";var part2="sratsvorsitzender)";var part3="Sebast";var part4="kel (Aufsicht";document.write(part3+part1+part4+part2+"</p>");</script><p></p>
-                    <script language="JavaScript" type="text/javascript">var part1="hallo";var part2=Math.pow(2,6);var part3=String.fromCharCode(part2);var part4="bunter-block.org";var part5=part1+String.fromCharCode(part2)+part4;document.write("<a href="+"mai"+"lto"+":"+part5+">"+part1+part3+part4+"</a>");</script><a href="mailto:hallo@bunter-block.org"></a>
-                </div>
-            </div>
+    <main role="main" class="container mt-5" id="wimmelbild-container">
+        <script src="js/blowup.min.js"></script>
+        <img id="wimmelbild" src="img/wimmelbild-ohne-hintergrund.gif" style="cursor: crosshair;" class="img-fluid"
+             alt="Wimmelbild">
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('img#wimmelbild').blowup({background: "#FCEBB6"});
+            });
+        </script>
+        <div class="container mt-5 px-3" id="willkommen">
+            <h1 class="ueberschrift">
+                Hi Leute!
+            </h1>
+            <p>
+                Wir sind das genossenschaftliche Gemeinschafts-Wohnprojekt „Bunter Block“ in Bochum Leithe.
+                Gemeinsam mit der Stiftung trias haben wir für das Grundstück der ehemaligen Bertram-Grundschule ein
+                Erbbaurecht erzielt. Durch diese Verbindung werden für das Projekt ökologische und soziale Ziele
+                dauerhaft gesichert und eine spätere Privatisierung ausgeschlossen.
+            </p>
+            <p>
+                In der Bertramstraße 6 wird also für immer gemeinschaftlich gewohnt und gewirtschaftet!
+            </p>
+            <p>
+                Was uns wichtig ist: Ein Leben im Einklang mit Mensch und Umwelt. Unsere Umgebung gemeinschaftlich
+                selbst gestalten. Ökologisches und bedarsfgerechtes Wirtschaften. Eine gleichberechtigte Gemeinschaft
+                unabhängig von sozialer, oder kultureller Herkunft.
+            </p>
+                Ihr wollt mehr wissen, oder einfach mal vorbeikommen? Dann schreib uns unter <a href="kontakt.php">Kontakt</a>!
+            </p>
         </div>
+
 
     </main>
 
@@ -74,8 +90,8 @@
         <div class="row" id="sitemap">
             <div class="offset-md-2 offset-sm-1 col-md-2 col-6 mt-4 mb-4">
                 <h4>Links</h4>
-                <a href="index.html" rel="noopener noreferrer">Startseite</a></br>
-                <a href="kontakt.html" rel="noopener noreferrer">Kontakt</a></br></br>
+                <a href="index.php" rel="noopener noreferrer">Startseite</a></br>
+                <a href="kontakt.php" rel="noopener noreferrer">Kontakt</a></br></br>
             </div>
             <div class="col-md-2 col-5 mt-4 mb-4 mr-4">
                 <h4>Partner</h4>
@@ -90,8 +106,8 @@
             </div>
             <div class="col-md-2 col-5 mt-4 mb-4">
                 <h4>Rechtliches</h4>
-                <a href="impressum.html" rel="noopener noreferrer">Impressum</a></br>
-                <a href="datenschutz.html" rel="noopener noreferrer">Datenschutzerklärung</a></br></br>
+                <a href="impressum.php" rel="noopener noreferrer">Impressum</a></br>
+                <a href="datenschutz.php" rel="noopener noreferrer">Datenschutzerklärung</a></br></br>
             </div>
         </div>
     </footer>

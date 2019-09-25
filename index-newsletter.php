@@ -31,7 +31,7 @@
 <div class="container" id="super-container">
 
     <nav class="navbar navbar-expand-md mb-4" id="header">
-        <a class="navbar-brand ml-2" href="index.html">
+        <a class="navbar-brand ml-2" href="index.php">
             <img src="img/haus.svg" alt="Bunter Block Branding" width="110">
         </a>
         <p class="navbar-text"><h1 class="d-sm-none d-md-block d-none d-sm-block">Bunter Block</h1></p>
@@ -42,7 +42,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item  active">
-                    <a class="nav-link" href="kontakt.html" style="text-align: right;"><b>Kontakt</b></a>
+                    <a class="nav-link" href="kontakt.php" style="text-align: right;"><b>Kontakt</b></a>
                 </li>
             </ul>
         </div>
@@ -75,26 +75,28 @@
                 selbst gestalten. Ökologisches und bedarsfgerechtes Wirtschaften. Eine gleichberechtigte Gemeinschaft
                 unabhängig von sozialer, oder kultureller Herkunft.
             </p>
-            Wollt ihr mehr wissen? Kommt doch mal vorbei!
+                Ihr wollt mehr wissen, oder einfach mal vorbeikommen? Dann schreibt uns!
             </p>
             <p>
-                Schreib uns unter <a href="kontakt.html">Kontakt</a> oder trag dich doch einfach in unseren Newsletter
+                Schreib uns unter <a href="kontakt.php">Kontakt</a> oder trag dich doch einfach in unseren Newsletter
                 ein.
             </p>
         </div>
+
         <div class="container mt-5 mb-5 px-3" id="mail">
+
             <div id="phplistsubscriberesult" class="container col-md-8">
-                <form method="post" name="subscribeform" id="subscribeform" enctype="multipart/form-data">
+                <form method="" name="subscribeform" id="subscribeform" enctype="multipart/form-data">
                     <div class="form-group row">
                         <div class="offset-sm-1 col-sm-6 mt-2">
-                            <input type="email" class="form-control" id="email"
+                            <input type="email" class="form-control" id="emailaddress" name="emailaddress"
                                    placeholder="Deine Mail-Adresse">
                         </div>
                         <input type=hidden name="htmlemail" value="1"> <input type="hidden" name="list[11]" value="signup"/>
                         <input type="hidden" name="subscribe" value="subscribe"/>
                         <div class="col-sm-5 mt-2">
                             <button type="submit" id="phplistsubscribe" class="btn btn-info" id="newsletter-button"
-                                    onclick="if (checkform()) {submitForm();} return false;">
+                                    onclick="submitForm(event);">
                                 Eintragen!
                             </button>
                         </div>
@@ -102,25 +104,21 @@
                     </div>
                 </form>
 
-                <script type="text/javascript"> function checkform() {
-                    re = /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/;
-                    if (!(re.test(jQuery("#email").val()))) {
-                        jQuery("#result").empty().append("Bitte gebe eine gültige Adresse an.");
-                        jQuery("#email").focus();
-                        return false;
-                    }
-                    return true;
-                }
+                <script type="text/javascript">
 
-                function submitForm() {
+                function submitForm(e) {
+                    e.preventDefault();
+
                     successMessage = 'Danke für deine Registrierung. Bitte prüfe deine Mails zur Bestätigung!';
                     data = jQuery('#subscribeform').serialize();
+                    alert(data);
                     jQuery.ajax({
                         type: 'POST',
                         data: data,
                         url: 'https://zettelwirtschaft.bunter-block.org/?p=subscribe&id=2',
                         dataType: 'html',
                         success: function (data, status, request) {
+                            alert(status);
                             jQuery("#result").empty().append(data != '' ? data : successMessage);
                             jQuery('#email').val('');
                         },
@@ -141,8 +139,8 @@
         <div class="row" id="sitemap">
             <div class="offset-md-2 offset-sm-1 col-md-2 col-6 mt-4 mb-4">
                 <h4>Links</h4>
-                <a href="index.html" rel="noopener noreferrer">Startseite</a></br>
-                <a href="kontakt.html" rel="noopener noreferrer">Kontakt</a></br></br>
+                <a href="index.php" rel="noopener noreferrer">Startseite</a></br>
+                <a href="kontakt.php" rel="noopener noreferrer">Kontakt</a></br></br>
             </div>
             <div class="col-md-2 col-5 mt-4 mb-4 mr-4">
                 <h4>Partner</h4>
@@ -157,8 +155,8 @@
             </div>
             <div class="col-md-2 col-5 mt-4 mb-4">
                 <h4>Rechtliches</h4>
-                <a href="impressum.html" rel="noopener noreferrer">Impressum</a></br>
-                <a href="datenschutz.html" rel="noopener noreferrer">Datenschutzerklärung</a></br></br>
+                <a href="impressum.php" rel="noopener noreferrer">Impressum</a></br>
+                <a href="datenschutz.php" rel="noopener noreferrer">Datenschutzerklärung</a></br></br>
             </div>
         </div>
     </footer>
