@@ -47,11 +47,27 @@
         </div>
     </nav>
 
+    <script>
+        function sendEmail() {
+
+            let vorname = document.getElementById("vorname").value;
+            let nachname = document.getElementById("nachname").value;
+            let cc = document.getElementById("cc").value;
+            let message = document.getElementById("message").value;
+
+            let email = "hallo@bunter-block.org";
+            let subject = "Kontakt zum bunten Block durch "+vorname+" "+nachname;
+
+
+            document.location = "mailto:"+email+"?subject="+subject+"&body="+message+"&cc="+cc;
+        }
+    </script>
+
     <main class="container" role="main">
         <div class="row">
             <div class="offset-md-4 col-md-4 mt-4 mb-4">
                 <div id="kontakt">
-                    <form action="mailto:hallo@bunter-block.org" method="post">
+                    <form>
                         <h1 class="ueberschrift">Wer bist Du?</h1>
                         <div class="form-group row">
                             <div class="col-sm-12">
@@ -65,20 +81,20 @@
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-12">
-                                <input type="email" class="form-control" id="mail" placeholder="E-Mail" required>
+                                <input type="email" class="form-control" id="cc" placeholder="E-Mail" required>
                             </div>
                         </div>
                         <h1 class="ueberschrift">Erzähl uns was Dir durch den Kopf geht!</h1>
-                        <textarea class="form-control col-sm-12" id="nachricht" rows="6" cols="30" placeholder="Nachricht"></textarea>
+                        <textarea class="form-control col-sm-12" id="message" rows="6" cols="30" placeholder="Nachricht"></textarea>
                         </br>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" required>
-                            <label class="form-check-label" for="defaultCheck1">
+                            <input class="form-check-input" type="checkbox" value="" id="datenschutz-check" required>
+                            <label class="form-check-label" for="datenschutz-check">
                                 Einverstanden mit der <a href="datenschutz.html">Datenschutzerklärung</a>
                             </label>
                         </div>
                         </br>
-                        <button type="submit" id="phplistsubscribe" class="btn btn-info" id="newsletter-button">Senden!</button>
+                        <button type="submit" id="phplistsubscribe" class="btn btn-info" id="newsletter-button" onClick="sendEmail()">Senden!</button>
                     </form>
                 </div>
             </div>
