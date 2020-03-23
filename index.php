@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <title>Bunter Block eG</title>
+    <meta name="google-site-verification" content="C17Nd2mMaXvjM67ma7y4AiJ59JGJoCVbpifZUXux91Y" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
