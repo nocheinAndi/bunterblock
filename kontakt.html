@@ -31,7 +31,7 @@
 <div class="container" id="super-container">
 
     <nav class="navbar navbar-expand-md mb-4" id="header">
-        <a class="navbar-brand ml-2" href="index.php">
+        <a class="navbar-brand ml-2" href="index.html">
             <img src="img/haus.svg" alt="Bunter Block Branding" width="110">
         </a>
         <p class="navbar-text"><h1 class="d-sm-none d-md-block d-none d-sm-block">Bunter Block</h1></p>
@@ -42,24 +42,61 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item  active">
-                    <a class="nav-link" href="kontakt.php" style="text-align: right;"><b>Kontakt</b></a>
+                    <a class="nav-link" href="kontakt.html" style="text-align: right;"><b>Kontakt</b></a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <main role="main" class="container">
+    <script>
+        function sendEmail() {
+
+            let vorname = document.getElementById("vorname").value;
+            let nachname = document.getElementById("nachname").value;
+            let cc = document.getElementById("cc").value;
+            let message = document.getElementById("message").value;
+
+            let email = "hallo@bunter-block.org";
+            let subject = "Kontakt zum bunten Block durch "+vorname+" "+nachname;
+
+
+            document.location = "mailto:"+email+"?subject="+subject+"&body="+message+"&cc="+cc;
+        }
+    </script>
+
+    <main class="container" role="main">
         <div class="row">
             <div class="offset-md-4 col-md-4 mt-4 mb-4">
-                <div id="impressum">
-                    <h1>Impressum</h1>
-                    <span><strong>Bunter Block eG</strong></span>
-                    <p>Bertramstraße 6<br>44866 Bochum</p>
-                    <p><strong>StNr: (beantragt)</strong></p>
-                    <p><strong>GnR 267 (Amtsgericht Bochum)&nbsp;</strong></p>
-                    <span><strong>Vertreten durch:</strong></span>    <script language="JavaScript" type="text/javascript">var part1="ico K";var part2="ig";var part3="N";var part4="ön";document.write("<p>"+part3+part1+part4+part2+"<br/>");var part1="ana";var part2="e";var part3="Mo";var part4=" Lau";document.write(part3+part1+part4+part2+"<br/>");var part1="pin M";var part2="ler";var part3="Cris";var part4="ül";document.write(part3+part1+part4+part2+"</br>");var part1="i Al A";var part2="ziz";var part3="Sam";var part4="bdul A";document.write(part3+part1+part4+part2+"</p>");</script>
-                    <script language="JavaScript" type="text/javascript">var part1="ian Hen";var part2="sratsvorsitzender)";var part3="Sebast";var part4="kel (Aufsicht";document.write(part3+part1+part4+part2+"</p>");</script><p></p>
-                    <script language="JavaScript" type="text/javascript">var part1="hallo";var part2=Math.pow(2,6);var part3=String.fromCharCode(part2);var part4="bunter-block.org";var part5=part1+String.fromCharCode(part2)+part4;document.write("<a href="+"mai"+"lto"+":"+part5+">"+part1+part3+part4+"</a>");</script><a href="mailto:hallo@bunter-block.org"></a>
+                <div id="kontakt">
+                    <form>
+                        <h1 class="ueberschrift">Wer bist Du?</h1>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" id="vorname" placeholder="Vorname" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" id="nachname" placeholder="Nachname" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <input type="email" class="form-control" id="cc" placeholder="E-Mail" required>
+                            </div>
+                        </div>
+                        <h1 class="ueberschrift">Erzähl uns was Dir durch den Kopf geht!</h1>
+                        <textarea class="form-control col-sm-12" id="message" rows="6" cols="30" placeholder="Nachricht"></textarea>
+                        </br>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="datenschutz-check" required>
+                            <label class="form-check-label" for="datenschutz-check">
+                                Einverstanden mit der <a href="datenschutz.html">Datenschutzerklärung</a>
+                            </label>
+                        </div>
+                        </br>
+                        <button type="submit" id="phplistsubscribe" class="btn btn-info" id="newsletter-button" onClick="sendEmail()">Senden!</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -74,8 +111,8 @@
         <div class="row" id="sitemap">
             <div class="offset-md-2 offset-sm-1 col-md-2 col-6 mt-4 mb-4">
                 <h4>Links</h4>
-                <a href="index.php" rel="noopener noreferrer">Startseite</a></br>
-                <a href="kontakt.php" rel="noopener noreferrer">Kontakt</a></br></br>
+                <a href="index.html" rel="noopener noreferrer">Startseite</a></br>
+                <a href="kontakt.html" rel="noopener noreferrer">Kontakt</a></br></br>
             </div>
             <div class="col-md-2 col-5 mt-4 mb-4 mr-4">
                 <h4>Partner</h4>
@@ -90,8 +127,8 @@
             </div>
             <div class="col-md-2 col-5 mt-4 mb-4">
                 <h4>Rechtliches</h4>
-                <a href="impressum.php" rel="noopener noreferrer">Impressum</a></br>
-                <a href="datenschutz.php" rel="noopener noreferrer">Datenschutzerklärung</a></br></br>
+                <a href="impressum.html" rel="noopener noreferrer">Impressum</a></br>
+                <a href="datenschutz.html" rel="noopener noreferrer">Datenschutzerklärung</a></br></br>
             </div>
         </div>
     </footer>

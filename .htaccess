@@ -14,7 +14,7 @@ Allow from all
 </FilesMatch>
 
 Options All
-DirectoryIndex index.php
+DirectoryIndex index.html
 
 # enable rewrite engine
 RewriteEngine on
@@ -50,7 +50,7 @@ RewriteCond %{HTTPS} !on
 RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
 <IfModule mod_headers.c>
-# Setzt den "Access-Control-Allow-Origin" Tag für http(s) und alle SubDomains (inkl. www) der aufgeführten Domains
+# Setzt den "Access-Control-Allow-Origin" Tag fï¿½r http(s) und alle SubDomains (inkl. www) der aufgefï¿½hrten Domains
 SetEnvIf Origin "http(s)?://([a-z0-9]*\.)?(zettelwirtschaft.bunter-block.org)$" AccessControlAllowOrigin=$0$1
 Header set Access-Control-Allow-Origin %{AccessControlAllowOrigin}e env=AccessControlAllowOrigin
 Header set Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept"
