@@ -1,139 +1,237 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Bunter Block eG</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="img/favicon.ico">
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-    <meta name="robots" content="index,follow">
-    <meta name="description"
-          content="Bunter Block ist ein Zusammenschluss von jungen Familien und Freunden, die beschlossen haben ihre Ideale und Ziele in einem gemeinsamen Wohnprojekt umzusetzen.">
-    <meta name="keywords" content="">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <meta name="robots" content="index,follow" />
+    <meta
+      name="description"
+      content="Bunter Block ist ein Zusammenschluss von jungen Familien und Freunden, die beschlossen haben ihre Ideale und Ziele in einem gemeinsamen Wohnprojekt umzusetzen."
+    />
+    <meta name="keywords" content="" />
     <script src="https://analytics.bunter-block.org/piwik.js" async=""></script>
-    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand|Open+Sans" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Patrick+Hand|Open+Sans"
+      rel="stylesheet"
+    />
     <!-- Custom styles for this template -->
-    <link href="css/custom.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-</head>
+    <link href="css/custom.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
-
-<div class="container" id="super-container">
-
-    <nav class="navbar navbar-expand-md mb-4" id="header">
+  <body>
+    <div class="container" id="super-container">
+      <nav class="navbar navbar-expand-md mb-4" id="header">
         <a class="navbar-brand ml-2" href="index.html">
-            <img src="img/haus.svg" alt="Bunter Block Branding" width="110">
+          <img src="img/haus.svg" alt="Bunter Block Branding" width="110" />
         </a>
-        <p class="navbar-text"><h1 class="d-sm-none d-md-block d-none d-sm-block">Bunter Block</h1></p>
-        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <p class="navbar-text"></p>
+        <h1 class="d-sm-none d-md-block d-none d-sm-block">Bunter Block</h1>
+        >
+        <button
+          class="navbar-toggler custom-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item  active">
-                    <a class="nav-link" href="kontakt.html" style="text-align: right;"><b>Kontakt</b></a>
-                </li>
-            </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item  active">
+              <a class="nav-link" href="kontakt.html" style="text-align: right;"
+                ><b>Kontakt</b></a
+              >
+            </li>
+          </ul>
         </div>
-    </nav>
+      </nav>
 
-    <script>
+      <script>
         function sendEmail() {
+          let vorname = document.getElementById("vorname").value;
+          let nachname = document.getElementById("nachname").value;
+          let cc = document.getElementById("cc").value;
+          let message = document.getElementById("message").value;
 
-            let vorname = document.getElementById("vorname").value;
-            let nachname = document.getElementById("nachname").value;
-            let cc = document.getElementById("cc").value;
-            let message = document.getElementById("message").value;
+          let email = "hallo@bunter-block.org";
+          let subject =
+            "Kontakt zum bunten Block durch " + vorname + " " + nachname;
 
-            let email = "hallo@bunter-block.org";
-            let subject = "Kontakt zum bunten Block durch "+vorname+" "+nachname;
-
-
-            document.location = "mailto:"+email+"?subject="+subject+"&body="+message+"&cc="+cc;
+          document.location =
+            "mailto:" +
+            email +
+            "?subject=" +
+            subject +
+            "&body=" +
+            message +
+            "&cc=" +
+            cc;
         }
-    </script>
+      </script>
 
-    <main class="container" role="main">
+      <main class="container" role="main">
         <div class="row">
-            <div class="offset-md-4 col-md-4 mt-4 mb-4">
-                <div id="kontakt">
-                    <form>
-                        <h1 class="ueberschrift">Wer bist Du?</h1>
-                        <div class="form-group row">
-                            <div class="col-sm-12">
-                                <input type="text" class="form-control" id="vorname" placeholder="Vorname" required>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm-12">
-                                <input type="text" class="form-control" id="nachname" placeholder="Nachname" required>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm-12">
-                                <input type="email" class="form-control" id="cc" placeholder="E-Mail" required>
-                            </div>
-                        </div>
-                        <h1 class="ueberschrift">Erzähl uns was Dir durch den Kopf geht!</h1>
-                        <textarea class="form-control col-sm-12" id="message" rows="6" cols="30" placeholder="Nachricht"></textarea>
-                        </br>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="datenschutz-check" required>
-                            <label class="form-check-label" for="datenschutz-check">
-                                Einverstanden mit der <a href="datenschutz.html">Datenschutzerklärung</a>
-                            </label>
-                        </div>
-                        </br>
-                        <button type="submit" id="phplistsubscribe" class="btn btn-info" id="newsletter-button" onClick="sendEmail()">Senden!</button>
-                    </form>
+          <div class="offset-md-4 col-md-4 mt-4 mb-4">
+            <div id="kontakt">
+              <form>
+                <h1 class="ueberschrift">Wer bist Du?</h1>
+                <div class="form-group row">
+                  <div class="col-sm-12">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="vorname"
+                      placeholder="Vorname"
+                      required
+                    />
+                  </div>
                 </div>
+                <div class="form-group row">
+                  <div class="col-sm-12">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nachname"
+                      placeholder="Nachname"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-12">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="cc"
+                      placeholder="E-Mail"
+                      required
+                    />
+                  </div>
+                </div>
+                <h1 class="ueberschrift">
+                  Erzähl uns was Dir durch den Kopf geht!
+                </h1>
+                <textarea
+                  class="form-control col-sm-12"
+                  id="message"
+                  rows="6"
+                  cols="30"
+                  placeholder="Nachricht"
+                ></textarea>
+                <br />
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="datenschutz-check"
+                    required
+                  />
+                  <label class="form-check-label" for="datenschutz-check">
+                    Einverstanden mit der
+                    <a href="datenschutz.html">Datenschutzerklärung</a>
+                  </label>
+                </div>
+                <br />
+                <button
+                  type="submit"
+                  id="phplistsubscribe"
+                  class="btn btn-info"
+                  id="newsletter-button"
+                  onClick="sendEmail()"
+                >
+                  Senden!
+                </button>
+              </form>
             </div>
+          </div>
         </div>
+      </main>
 
-    </main>
-
-    <!-- Footer -->
-    <footer class="page-footer font-small mt-5" id="footer">
+      <!-- Footer -->
+      <footer class="page-footer font-small mt-5" id="footer">
         <div id="punkte-container">
-            <img id="punkte" src="img/punkte.gif" class="img-fluid" alt="Punktewolke"/>
+          <img
+            id="punkte"
+            src="img/punkte.gif"
+            class="img-fluid"
+            alt="Punktewolke"
+          />
         </div>
         <div class="row" id="sitemap">
-            <div class="offset-md-2 offset-sm-1 col-md-2 col-6 mt-4 mb-4">
-                <h4>Links</h4>
-                <a href="index.html" rel="noopener noreferrer">Startseite</a></br>
-                <a href="kontakt.html" rel="noopener noreferrer">Kontakt</a></br></br>
-            </div>
-            <div class="col-md-2 col-5 mt-4 mb-4 mr-4">
-                <h4>Partner</h4>
-                <a href="https://www.stiftung-trias.de/" target="_blank" rel="noopener noreferrer">Stiftung
-                    trias</a></br>
-                <a href="https://www.gls.de/" target="_blank" rel="noopener noreferrer">GLS Bank</a></br>
-            </div>
-            <div class="col-md-2 col-6 mt-4 mb-4">
-                <h4>Mehr Partner</h4>
-                <a href="https://www.wbb-nrw.de/" target="_blank" rel="noopener noreferrer">Wohnbund NRW</a></br>
-                <a href="https://lunatic-circus.de/" target="_blank" rel="noopener noreferrer">Lunatic Circus</a>
-            </div>
-            <div class="col-md-2 col-5 mt-4 mb-4">
-                <h4>Rechtliches</h4>
-                <a href="impressum.html" rel="noopener noreferrer">Impressum</a></br>
-                <a href="datenschutz.html" rel="noopener noreferrer">Datenschutzerklärung</a></br></br>
-            </div>
+          <div class="offset-md-2 offset-sm-1 col-md-2 col-6 mt-4 mb-4">
+            <h4>Links</h4>
+            <a href="index.html" rel="noopener noreferrer">Startseite</a><br />
+            <a href="kontakt.html" rel="noopener noreferrer">Kontakt</a
+            ><br /><br />
+          </div>
+          <div class="col-md-2 col-5 mt-4 mb-4 mr-4">
+            <h4>Partner</h4>
+            <a
+              href="https://www.stiftung-trias.de/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Stiftung trias</a
+            ><br />
+            <a
+              href="https://www.gls.de/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GLS Bank</a
+            ><br />
+          </div>
+          <div class="col-md-2 col-6 mt-4 mb-4">
+            <h4>Mehr Partner</h4>
+            <a
+              href="https://www.wbb-nrw.de/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Wohnbund NRW</a
+            ><br />
+            <a
+              href="https://lunatic-circus.de/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Lunatic Circus</a
+            >
+          </div>
+          <div class="col-md-2 col-5 mt-4 mb-4">
+            <h4>Rechtliches</h4>
+            <a href="impressum.html" rel="noopener noreferrer">Impressum</a
+            ><br />
+            <a href="datenschutz.html" rel="noopener noreferrer"
+              >Datenschutzerklärung</a
+            ><br /><br />
+          </div>
         </div>
-    </footer>
-
-</div>
-
-</body>
+      </footer>
+    </div>
+  </body>
 </html>
